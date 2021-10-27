@@ -10,7 +10,7 @@
 <body>
 
 <div>
-    <h1>header / menu / logo / .... </h1>
+    <h1>HEADER .... </h1>
     <hr>
 </div>
 

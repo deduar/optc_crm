@@ -7,7 +7,7 @@
                 <h2>Oportunicar_CRM / Provinces - oportunicar.com</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="#"> Create New Provonce</a>
+                <a class="btn btn-success" href="{{ route('province.create') }}"> Create New Provonce</a>
             </div>
         </div>
     </div>
@@ -22,7 +22,7 @@
         <tr>
             <th>No</th>
             <th>Name</th>
-            <th>Details</th>
+            <th>CP</th>
             <th width="280px">Action</th>
         </tr>
         @foreach ($provinces as $province)
@@ -31,11 +31,11 @@
             <td>{{ $province->name }}</td>
             <td>{{ $province->cp }}</td>
             <td>
-                <form action="{{ route('provinces.destroy',$province->id) }}" method="POST">
+                <form action="{{ route('province.destroy',$province->id) }}" method="POST">
    
-                    <a class="btn btn-info" href="{{ route('provinces.show',$province->id) }}">Show</a>
+                    <a class="btn btn-info" href="{{ route('province.show',$province->id) }}">Show</a>
     
-                    <a class="btn btn-primary" href="{{ route('provinces.edit',$province->id) }}">Edit</a>
+                    <a class="btn btn-primary" href="{{ route('province.edit',$province->id) }}">Edit</a>
    
                     @csrf
                     @method('DELETE')
