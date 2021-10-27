@@ -4,10 +4,10 @@
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
-            <h2>Add New Province</h2>
+            <h2>Add New Activity</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('province.index') }}"> Back</a>
+            <a class="btn btn-primary" href="{{ route('activity.index') }}"> Back</a>
         </div>
     </div>
 </div>
@@ -23,20 +23,14 @@
 </div>
 @endif
 
-<form action="{{ route('province.store') }}" method="POST">
+<form action="{{ route('activity.store') }}" method="POST">
     @csrf
 
     <div class="row">
-        <div class="col-xs-5 col-sm-5 col-md-5">
+        <div class="col-xs-10 col-sm-10 col-md-10">
             <div class="form-group">
-                <strong>Name:</strong>
-                <input type="text" name="name" class="form-control" placeholder="Name">
-            </div>
-        </div>
-        <div class="col-xs-5 col-sm-5 col-md-5">
-            <div class="form-group">
-                <strong>CP:</strong>
-                <input type="text" name="cp" class="form-control" placeholder="Postal code">
+                <strong>Description:</strong>
+                <input type="text" name="description" class="form-control" placeholder="Descripction">
             </div>
         </div>
         <div class="col-xs-2 col-sm-2 col-md-2 text-right">

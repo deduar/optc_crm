@@ -4,10 +4,10 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Oportunicar_CRM / Provinces - oportunicar.com</h2>
+                <h2>Oportunicar_CRM / Activities - oportunicar.com</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('province.create') }}"> Create New Provonce</a>
+                <a class="btn btn-success" href="{{ route('activity.create') }}"> Create New Activity</a>
             </div>
         </div>
     </div>
@@ -21,21 +21,19 @@
     <table class="table table-bordered">
         <tr>
             <th>No</th>
-            <th>Name</th>
-            <th>CP</th>
+            <th>Description</th>
             <th width="280px">Action</th>
         </tr>
-        @foreach ($provinces as $province)
+        @foreach ($activities as $activity)
         <tr>
             <td>{{ ++$i }}</td>
-            <td>{{ $province->name }}</td>
-            <td>{{ $province->cp }}</td>
+            <td>{{ $activity->description }}</td>
             <td>
-                <form action="{{ route('province.destroy',$province->id) }}" method="POST">
+                <form action="{{ route('activity.destroy',$activity->id) }}" method="POST">
    
-                    <a class="btn btn-info" href="{{ route('province.show',$province->id) }}">Show</a>
+                    <a class="btn btn-info" href="{{ route('activity.show',$activity->id) }}">Show</a>
     
-                    <a class="btn btn-primary" href="{{ route('province.edit',$province->id) }}">Edit</a>
+                    <a class="btn btn-primary" href="{{ route('activity.edit',$activity->id) }}">Edit</a>
    
                     @csrf
                     @method('DELETE')
@@ -47,6 +45,6 @@
         @endforeach
     </table>
   
-    {!! $provinces->links() !!}
+    {!! $activities->links() !!}
       
 @endsection
